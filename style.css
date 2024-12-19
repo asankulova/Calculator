@@ -96,3 +96,16 @@ body {
     background-color: #f59e0b;
 }
 
+.hidden {
+    display: none;
+}
+
+.btn.toggle-mode {
+    background-color: #6366f1;
+    color: white;
+    margin: 10px 0;
+}
+
+.btn.toggle-mode:hover {
+    background-color: #4f46e5;
+}
