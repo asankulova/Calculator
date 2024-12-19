@@ -87,7 +87,32 @@ class AdvancedCalculator {
         this.previousOperand = '';
         this.updateDisplay();
     }
+    applyFunction(func) {
+        let computation;
+        const value = parseFloat(this.currentOperand);
 
+        if (isNaN(value)) return;
+
+        switch (func) {
+            case '√':
+                computation = Math.sqrt(value);
+                break;
+            case 'sin':
+                computation = Math.sin((value * Math.PI) / 180);
+                break;
+            case 'cos':
+                computation = Math.cos((value * Math.PI) / 180);
+                break;
+            case 'tan':
+                computation = Math.tan((value * Math.PI) / 180);
+                break;
+            default:
+                return;
+        }
+
+        this.currentOperand = computation;
+        this.updateDisplay();
+    }
    
     clear() {
         this.currentOperand = '';
